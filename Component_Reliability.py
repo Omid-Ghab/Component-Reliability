@@ -33,34 +33,34 @@ def show_dist():
             st.subheader('Please enter failure rate of ' + distName + ' distribution')
             st.number_input('Lambda (scale parameter)', step=0.000001, key='distExponential_Lambda')
 
-#         elif distName == 'Normal':
-#             st.number_input('μ = location parameter (−∞<μ<∞)', step=0.01, key='distNormal_MuParam')
-#             st.number_input('σ = scale parameter (σ>0)', step=0.01, key='distNormal_SigmaParam')
+        elif distName == 'Normal':
+            st.number_input('μ = location parameter (−∞<μ<∞)', step=0.01, key='distNormal_MuParam')
+            st.number_input('σ = scale parameter (σ>0)', step=0.01, key='distNormal_SigmaParam')
 
-#         elif distName == 'Lognormal':
-#             st.subheader('Please enter parameters of ' + distName + ' distribtion')
-#             st.number_input('μ = scale parameter (−∞<μ<∞)', step=0.01, key='distLognormal_MuParam')
-#             st.number_input('σ = shape parameter (σ>0)', step=0.01, key='distLognormal_SigmaParam')
+        elif distName == 'Lognormal':
+            st.subheader('Please enter parameters of ' + distName + ' distribtion')
+            st.number_input('μ = scale parameter (−∞<μ<∞)', step=0.01, key='distLognormal_MuParam')
+            st.number_input('σ = shape parameter (σ>0)', step=0.01, key='distLognormal_SigmaParam')
 
-#         elif distName == 'Gamma':
-#             st.subheader('Please enter parameters of ' + distName + ' distribtion')
-#             st.number_input('α = scale parameter (α>0)', step=0.01, key='distGamma_AlphaParam')
-#             st.number_input('β = shape parameter (β>0)', step=0.01, key='distGamma_BetaParam')
+        elif distName == 'Gamma':
+            st.subheader('Please enter parameters of ' + distName + ' distribtion')
+            st.number_input('α = scale parameter (α>0)', step=0.01, key='distGamma_AlphaParam')
+            st.number_input('β = shape parameter (β>0)', step=0.01, key='distGamma_BetaParam')
 
-#         elif distName == 'Beta':
-#             st.subheader('Please enter parameters of ' + distName + ' distribtion')
-#             st.number_input('α = shape parameter (α>0)', step=0.01, key='distBeta_AlphaParam')
-#             st.number_input('β = shape parameter (β>0)', step=0.01, key='distBeta_BetaParam')
+        elif distName == 'Beta':
+            st.subheader('Please enter parameters of ' + distName + ' distribtion')
+            st.number_input('α = shape parameter (α>0)', step=0.01, key='distBeta_AlphaParam')
+            st.number_input('β = shape parameter (β>0)', step=0.01, key='distBeta_BetaParam')
 
-#         elif distName == 'Loglogistic':
-#             st.subheader('Please enter parameters of ' + distName + ' distribtion')
-#             st.number_input('α = scale parameter (α>0)', step=0.01, key='distLoglogistic_AlphaParam')
-#             st.number_input('β = shape parameter (β>0)', step=0.01, key='distLoglogistic_BetaParam')
+        elif distName == 'Loglogistic':
+            st.subheader('Please enter parameters of ' + distName + ' distribtion')
+            st.number_input('α = scale parameter (α>0)', step=0.01, key='distLoglogistic_AlphaParam')
+            st.number_input('β = shape parameter (β>0)', step=0.01, key='distLoglogistic_BetaParam')
 
-#         elif distName == 'Gumbel':
-#             st.subheader('Please enter parameters of ' + distName + ' distribtion')
-#             st.number_input('μ = location parameter (−∞<μ<∞)', step=0.01, key='distGumbel_MuParam')
-#             st.number_input('σ = scale parameter (σ>0)', step=0.01, key='distGumbel_SigmaParam')
+        elif distName == 'Gumbel':
+            st.subheader('Please enter parameters of ' + distName + ' distribtion')
+            st.number_input('μ = location parameter (−∞<μ<∞)', step=0.01, key='distGumbel_MuParam')
+            st.number_input('σ = scale parameter (σ>0)', step=0.01, key='distGumbel_SigmaParam')
         
         sfButton = st.form_submit_button(label='Show Reliability Curve', on_click=show_dist)
         pdfButton = st.form_submit_button(label='Show Probebility Distribution Function Curve', on_click=show_dist)
